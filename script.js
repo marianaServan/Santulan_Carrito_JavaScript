@@ -143,7 +143,7 @@ $(() => {
             )
         }
 
-        $('#divCarrito').fadeIn(1000) //concatenación de animaciones
+        $('#divCarrito').fadeIn(1000) 
     })
 })
 
