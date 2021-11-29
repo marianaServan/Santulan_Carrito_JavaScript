@@ -70,14 +70,14 @@ $(() => {
 
     // Veo si dejó el carrito cargado de otra sesión
     carritoAlmacenado = JSON.parse(localStorage.getItem('Carrito'))
-    if (carritoAlmacenado.length != 0) {
+    if (carritoAlmacenado != null) {
         carritoAlmacenado.forEach(compra => {
             carritoUsuario.push({ productoComprado: compra.productoComprado, cantidadComprada: compra.cantidadComprada })
         })
     }
 
     costoAlmacenado = JSON.parse(localStorage.getItem('Costo'))
-    if (costoAlmacenado != 0) {
+    if (costoAlmacenado != null) {
         costo = costoAlmacenado
     }
 
