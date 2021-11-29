@@ -91,6 +91,8 @@ $(() => {
         })
 
         $(`#botonAgrega${producto.nombre}`).click(() => {
+            $('#divAgregadoCorrecto').hide()
+
             cantidad = parseInt(cantidadProd.val())
             carritoUsuario.push({ productoComprado: producto, cantidadComprada: cantidad })
             carritoGuardado = localStorage.setItem('Carrito', JSON.stringify(carritoUsuario))
@@ -103,12 +105,16 @@ $(() => {
                 <p> Se ha agregado correctamente ${cantidad} ${producto.nombre} al carrito. </p>
             `
             )
+
+            $('#divAgregadoCorrecto').slideDown(1000).delay(1000).fadeOut(1000)
+
             $('#divCarrito').empty()
         })
     })
 
     // Muestro el carrito
     $('#verCarrito').click(() => {
+        $('#divCarrito').hide()
         $('#divCarrito').empty()
         carritoAlmacenado = JSON.parse(localStorage.getItem('Carrito'))
         costoAlmacenado = JSON.parse(localStorage.getItem('Costo'))
@@ -136,6 +142,8 @@ $(() => {
             `
             )
         }
+
+        $('#divCarrito').fadeIn(1000) //concatenación de animaciones
     })
 })
 
