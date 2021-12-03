@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "nombre": "Remera",
+        "color": "blanca",
+        "detalle": "con mangas levantadas", 
+        "precio": 1900,
+        "imagen": "./images/rem1.jpg" 
+    },
+    {
+        "id": 2,
+        "nombre": "Remera",
+        "color": "negra",
+        "detalle": "con bolsillo gris", 
+        "precio": 2000,
+        "imagen": "./images/rem2.jpg" 
+    },
+    {
+        "id": 3,
+        "nombre": "Remera",
+        "color": "azul marino",
+        "detalle": "con mangas levantadas y cinta en espalda", 
+        "precio": 1800,
+        "imagen": "./images/rem3.jpg" 
+    },
+    {
+        "id": 4,
+        "nombre": "Remera",
+        "color": "marrón",
+        "detalle": "con cuello abierto", 
+        "precio": 2300,
+        "imagen": "./images/rem4.jpg" 
+    },
+    {
+        "id": 5,
+        "nombre": "Remera",
+        "color": "azul francia",
+        "detalle": "con mangas levantadas", 
+        "precio": 1900,
+        "imagen": "./images/rem5.jpg" 
+    },
+    {
+       "id": 6,
+        "nombre": "Remera",
+        "color": "blanca",
+        "detalle": "con mangas levantadas", 
+        "precio": 1900,
+        "imagen": "./images/rem6.jpg" 
+    }, 
+    {
+        "id": 7,
+         "nombre": "Remera",
+         "color": "violeta",
+         "detalle": "con recortes", 
+         "precio": 2300,
+         "imagen": "./images/rem7.jpg" 
+    }, 
+    {
+        "id": 8,
+         "nombre": "Remera",
+         "color": "amarilla",
+         "detalle": "con cinta en hombros", 
+         "precio": 1900,
+         "imagen": "./images/rem8.jpg" 
+    },     
+    {
+        "id": 9,
+         "nombre": "Remera",
+         "color": "bordó",
+         "detalle": "con mangas levantadas", 
+         "precio": 1900,
+         "imagen": "./images/rem9.jpg" 
+    },
+    {
+        "id": 10,
+         "nombre": "Remera",
+         "color": "blanca",
+         "detalle": "con cinta en hombros", 
+         "precio": 1900,
+         "imagen": "./images/rem10.jpg" 
+    },
+    {
+        "id": 11,
+         "nombre": "Remera",
+         "color": "mostaza",
+         "detalle": "con cinta a los costdos y en hombros", 
+         "precio": 1800,
+         "imagen": "./images/rem11.jpg" 
+    },
+    {
+        "id": 12,
+         "nombre": "Remera",
+         "color": "verde",
+         "detalle": "con costuras a la vista", 
+         "precio": 1900,
+         "imagen": "./images/rem12.jpg" 
+    },
+    {
+        "id": 13,
+         "nombre": "Campera",
+         "color": "gris topo",
+         "detalle": "con detalles en negro", 
+         "precio": 3500,
+         "imagen": "./images/camp1.jpg" 
+    },
+    {
+        "id": 14,
+         "nombre": "Campera",
+         "color": "natural",
+         "detalle": "", 
+         "precio": 3500,
+         "imagen": "./images/camp2.jpg" 
+    },
+    {
+        "id": 15,
+         "nombre": "Campera",
+         "color": "negro",
+         "detalle": "con detalles en gris", 
+         "precio": 3500,
+         "imagen": "./images/camp3.jpg" 
+    },
+    {
+        "id": 16,
+         "nombre": "Sweater",
+         "color": "negro jaspeado",
+         "detalle": "hecho en morley de lana", 
+         "precio": 3400,
+         "imagen": "./images/swe1.jpg" 
+    },
+    {
+        "id": 17,
+         "nombre": "Sweater",
+         "color": "rosa jaspeado",
+         "detalle": "hecho en lanilla", 
+         "precio": 2500,
+         "imagen": "./images/swe2.jpg" 
+    },
+    {
+        "id": 18,
+         "nombre": "Sweater",
+         "color": "azul francia",
+         "detalle": "hecho en lanilla", 
+         "precio": 2500,
+         "imagen": "./images/swe3.jpg" 
+    },
+    {
+        "id": 19,
+         "nombre": "Sweater",
+         "color": "bordó",
+         "detalle": "hecho en lanilla", 
+         "precio": 2500,
+         "imagen": "./images/swe4.jpg" 
+    },
+    {
+        "id": 20,
+         "nombre": "Sweater",
+         "color": "gris topo",
+         "detalle": "hecho en lanilla", 
+         "precio": 2500,
+         "imagen": "./images/swe5.jpg" 
+    },
+    {
+        "id": 21,
+         "nombre": "Sweater",
+         "color": "gris melange",
+         "detalle": "hecho en lanilla", 
+         "precio": 2500,
+         "imagen": "./images/swe6.jpg" 
+    }
+]

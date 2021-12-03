@@ -1,0 +1,333 @@
+@charset "UTF-8";
+/*-----colores-----*/
+/*-----tipografías-----*/
+/*-----tamaños-----*/
+/* BÁSICOS */
+html {
+  font-size: 16px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+ol {
+  list-style-type: none; }
+
+ul {
+  list-style-type: none; }
+
+.pantallaCompleta {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+/* HEADER */
+.headerColor {
+  background-image: linear-gradient(to bottom, #f1cc9b, #fdefd1); }
+
+.anchoLogo {
+  width: 4rem; }
+
+.nav--otrasPaginas {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+/*-------- Menú hamburguesa --------*/
+.nav--colapsado {
+  display: flex;
+  flex-direction: column; }
+
+.miBurger {
+  width: 3rem;
+  height: 2.2rem;
+  border-color: rgba(95, 42, 105, 0.479);
+  background-color: transparent;
+  border-radius: 0.3rem; }
+
+.miBurger .line {
+  width: 80%;
+  height: 0.13rem;
+  float: left;
+  margin-left: 0.32rem;
+  background-color: rgba(95, 42, 105, 0.479);
+  margin-bottom: 0.32rem; }
+
+/*-------- Menú desplegable --------*/
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fdefd1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column; }
+
+/*------- Estilo letras ------*/
+.nombre {
+  font-family: "DM Serif Display", serif;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #662483;
+  text-align: center; }
+
+.hyp, .hypHeader, .hypHeaderActive, .hypBreadcrumb, .hypHeaderBoton, .hypHeaderBotonDesplegado, .hypFooter {
+  /*la voy a usar para el footer también*/
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #662483;
+  font-size: 0.8rem; }
+
+.hypHeader, .hypHeaderActive {
+  text-align: right;
+  padding-left: 0.385rem;
+  padding-right: 0.385rem;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem; }
+  .hypHeader:hover, .hypHeaderActive:hover {
+    color: #f1a643; }
+
+.hypHeaderActive {
+  font-weight: bold; }
+
+.hypBreadcrumb:hover {
+  color: #f1a643; }
+
+.hypHeaderBoton, .hypHeaderBotonDesplegado {
+  text-align: left;
+  padding-left: 0.7rem;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem; }
+  .hypHeaderBoton:hover, .hypHeaderBotonDesplegado:hover {
+    color: #f1a643; }
+
+.hypHeaderBotonDesplegado {
+  padding-right: 0.7rem; }
+
+/* BODY */
+.bodyColor {
+  background-color: #fdefd1; }
+
+/*------- Estilo letras ------*/
+.textGenTitulo {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "DM Serif Display", serif;
+  font-size: 1.28rem;
+  color: #5e2a69;
+  text-align: center;
+  padding-bottom: 0.35rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem; }
+
+.textGenParrafo {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.81rem;
+  color: #492152;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 1.16rem;
+  padding-right: 1.16rem; }
+
+.textGenParrafoLeft {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.81rem;
+  color: #492152;
+  text-align: center;
+  text-align: left; }
+
+.textGenParrafoTabla {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.81rem;
+  color: #492152;
+  text-align: center;
+  text-decoration: solid;
+  padding-left: 1.16rem;
+  padding-right: 1.16rem;
+  font-weight: bold; }
+
+/*------- Botones ------*/
+.botones, .botonesFormulario, .botonesCarrito {
+  color: #5e2a69;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  background-color: rgba(95, 42, 105, 0.144);
+  text-decoration: none;
+  text-transform: uppercase; }
+  .botones:hover, .botonesFormulario:hover, .botonesCarrito:hover {
+    color: #f1a643;
+    background-color: rgba(95, 42, 105, 0.479); }
+
+.botonesFormulario {
+  border-style: none;
+  margin-left: 0.35rem;
+  margin-right: 0.35rem; }
+
+.botonesCarrito {
+  border-style: none;
+  background-color: transparent; }
+  .botonesCarrito:hover {
+    background-color: transparent; }
+
+/*------- Elementos Centrados ------*/
+.centradoHoriz {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.textCentradoVer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+/*------ Espacio entre párrafos -------*/
+.espaciado {
+  margin-top: 1rem; }
+
+/*------- Páginas ------*/
+/*------------------------ Home -----------------------*/
+.imagenCircular {
+  border-radius: 7rem; }
+
+/*------------------------ Productos -----------------------*/
+.tiposProductos {
+  padding-left: 0.12rem;
+  padding-right: 0.12rem; }
+  .tiposProductos:hover {
+    transform: scale(1.035, 1.035); }
+
+.cardEstilo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: rgba(95, 42, 105, 0.144);
+  background-clip: border-box;
+  border: 0.06rem solid rgba(95, 42, 105, 0.479);
+  border-radius: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 0.81rem;
+  color: #492152;
+  text-decoration: none; }
+  .cardEstilo:hover {
+    transform: scale(1.035, 1.035);
+    background-color: rgba(95, 42, 105, 0.479); }
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; }
+
+.cardAlto {
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.bordeImagen {
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem; }
+
+.mensaje {
+  background-color: #662483;
+  color: #fdefd1; }
+
+/*------------------------ A medida -----------------------*/
+.carousel {
+  width: 50%; }
+
+/*------------------------ Talles -----------------------*/
+.imagenMedidas {
+  width: 60%; }
+
+.colorBordeTabla {
+  border-color: rgba(95, 42, 105, 0.479);
+  border-style: solid; }
+
+/*------------------------ Contacto -----------------------*/
+.anchoYborde {
+  width: 100%;
+  border-color: rgba(95, 42, 105, 0.479);
+  border-width: thin; }
+
+.textGenInput {
+  padding-top: 0.35rem; }
+
+/* FOOTER */
+footer {
+  background-image: linear-gradient(to top, #f1cc9b, #fdefd1);
+  height: 4rem;
+  padding-top: 1.4rem; }
+
+.hypFooter:hover {
+  color: #f1a643; }
+
+.iconos {
+  padding-left: 0%; }
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .nombre {
+    font-size: 2.2rem; }
+  .nav--colapsado {
+    flex-direction: row; }
+  .miBurger {
+    display: none; }
+  .hyp, .hypHeader, .hypHeaderActive, .hypBreadcrumb, .hypHeaderBoton, .hypHeaderBotonDesplegado, .hypFooter {
+    font-size: 1rem; }
+  .hypBreadcrumb {
+    font-size: 0.9rem; }
+  .textGenTitulo {
+    font-size: 2rem; }
+  .textGenParrafo {
+    font-size: 1.1rem; }
+  .textGenParrafoLeft {
+    font-size: 1.1rem; }
+  .textGenParrafoTabla {
+    font-size: 1.1rem; }
+  .anchoLogo {
+    width: 5rem; }
+  .imagenMedidas {
+    width: 80%; }
+  .cardEstilo {
+    font-size: 1.1rem; } }
+
+@media (min-width: 1024px) {
+  .nombre {
+    font-size: 2.5rem; }
+  .nav--colapsado {
+    flex-direction: row; }
+  .miBurger {
+    display: none; }
+  .hyp, .hypHeader, .hypHeaderActive, .hypBreadcrumb, .hypHeaderBoton, .hypHeaderBotonDesplegado, .hypFooter {
+    font-size: 1.2rem; }
+  .textGenTitulo {
+    font-size: 2rem; }
+  .textGenParrafo {
+    font-size: 1.2rem; }
+  .textGenParrafoLeft {
+    font-size: 1.2rem; }
+  .textGenParrafoTabla {
+    font-size: 1.2rem; }
+  .anchoLogo {
+    width: 5.1rem; }
+  .imagenMedidas {
+    width: 60%; }
+  .cardEstilo {
+    font-size: 1.2rem; } }

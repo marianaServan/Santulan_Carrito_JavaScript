@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Santulan - Talles</title>
+    <meta name="description" content="Tenemos nuestra propia tabla de talles, una modificación de
+    la tabla de talles convencional. Además, ofrecemos el servicio de confección a medida."> 
+    <meta name="keywords" content="talles, variedad de talles, ropa a medida">
+</head>
+<body class="bodyColor">
+    <div class="pantallaCompleta">
+
+        <header class="headerColor">   
+            <nav class="navbar navbar-expand-lg navbar-expand-md">
+                <div class="container-fluid">
+                    <!-- LOGO (HOME) -->
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../images/LogoSantulan1.png" alt="Logo" class="anchoLogo d-inline-block align-text-center img-fluid">
+                        <span class="nombre"> Santulan </span> 
+                    </a>
+                    
+                    <!-- MENÚ HAMBUERGUESA   -->
+                    <button class="miBurger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="line"></span> 
+                        <span class="line"></span> 
+                        <span class="line" style="margin-bottom: 0;"></span>
+                    </button>
+
+                    <!-- PÁGINAS -->
+                    <div class="collapse navbar-collapse nav--otrasPaginas" id="navbarSupportedContent">
+                        <div class="nav nav--colapsado">
+                            <a class="hypHeader" aria-current="page" href="../index.html">HOME</a>
+                            
+                            <div>
+                                <div class="dropdown">
+                                    <i class="bi bi-chevron-down hypHeaderBoton"></i>
+                                    <div class="dropdown-content">
+                                        <a class="hypHeaderBotonDesplegado" href="subpages/remeras.html">REMERAS</a>
+                                        <a class="hypHeaderBotonDesplegado" href="subpages/sweaters.html">SWEATERS</a>
+                                        <a class="hypHeaderBotonDesplegado" href="subpages/camperas.html">CAMPERAS</a>
+                                    </div>                                  
+                                </div>  
+                                <a class="hypHeader dropdown" href="Productos.html">
+                                    PRODUCTOS 
+                                </a>
+                            </div>    
+
+                            <a class="hypHeader" href="Amedida.html">A MEDIDA</a>
+                            <a class="hypHeaderActive" href="Talles.html">TALLES</a>
+                            <a class="hypHeader" href="Contacto.html">CONTACTO</a>         
+                            <a class="botonesCarrito" href="Carrito.html"><i class="bi bi-cart-fill" > </i></a>       
+                        </div>                                                
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            
+            <div class="container">
+                <h1 class="textGenTitulo"> Nuestros talles</h1>
+    
+                <!-- sobre la tabla -->
+                <p class="textGenParrafo">
+                    A Santulan le importa que la prenda calce perfecto.
+                    Por eso, tenemos una gran variedad de talles para que todas y
+                    todos encuentren ESA hecha a su medida!
+                </p>
+                <p class="textGenParrafo">
+                    Hacemos una comparación con los talles clásicos,
+                    para que te resulte más facil encontrar el tuyo:
+                </p>
+                <!--
+                <img src="..\images/tablaTalles.jpg" width="50%" alt="Tabla">
+                -->
+            </div>
+
+            <!-- La tabla de talles -->
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <!-- Los usuales -->
+                        <thead class="colorBordeTabla">                        
+                            <tr>
+                                <th scope="col" class="textGenParrafoTabla "></th>
+                                <th scope="col" colspan="2" class="textGenParrafoTabla ">XS</th>
+                                <th scope="col" colspan="2" class="textGenParrafoTabla ">S</th>
+                                <th scope="col" colspan="2" class="textGenParrafoTabla ">M</th>
+                                <th scope="col" colspan="4" class="textGenParrafoTabla ">L</th>
+                                <th scope="col" colspan="2" class="textGenParrafoTabla ">XL</th>
+                                <th scope="col" colspan="2" class="textGenParrafoTabla ">XL+</th>
+                                <th scope="col" colspan="2" class="textGenParrafoTabla ">XXL</th>
+                            </tr>
+                        </thead>
+    
+                        <!-- Los de Santulan -->
+                        <thead class="colorBordeTabla">
+                            <tr>
+                            <th scope="col" class="textGenParrafoTabla"></th>
+                            <th scope="col" class="textGenParrafoTabla">1A</th>
+                            <th scope="col" class="textGenParrafoTabla">1B</th>
+                            <th scope="col" class="textGenParrafoTabla">2A</th>
+                            <th scope="col" class="textGenParrafoTabla">2B</th>
+                            <th scope="col" class="textGenParrafoTabla">3A</th>
+                            <th scope="col" class="textGenParrafoTabla">3B</th>
+                            <th scope="col" class="textGenParrafoTabla">4A</th>  
+                            <th scope="col" class="textGenParrafoTabla">4B</th>                          
+                            <th scope="col" class="textGenParrafoTabla">4C</th>
+                            <th scope="col" class="textGenParrafoTabla">4D</th>
+                            <th scope="col" class="textGenParrafoTabla">5A</th>
+                            <th scope="col" class="textGenParrafoTabla">5B</th>
+                            <th scope="col" class="textGenParrafoTabla">6A</th>                          
+                            <th scope="col" class="textGenParrafoTabla">6B</th>
+                            <th scope="col" class="textGenParrafoTabla">7A</th>
+                            <th scope="col" class="textGenParrafoTabla">7B</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody class="colorBordeTabla">
+                            <tr>
+                                <th scope="row" class="textGenParrafoTabla">Largo</th>
+                                <td class="textGenParrafo">68</td>
+                                <td class="textGenParrafo">74</td>
+                                <td class="textGenParrafo">70</td>
+                                <td class="textGenParrafo">76</td>
+                                <td class="textGenParrafo">73</td>
+                                <td class="textGenParrafo">79</td>
+                                <td class="textGenParrafo">75</td>                        
+                                <td class="textGenParrafo">81</td>
+                                <td class="textGenParrafo">75</td>
+                                <td class="textGenParrafo">81</td>
+                                <td class="textGenParrafo">76</td>
+                                <td class="textGenParrafo">82</td>
+                                <td class="textGenParrafo">78</td>
+                                <td class="textGenParrafo">84</td>
+                                <td class="textGenParrafo">80</td>
+                                <td class="textGenParrafo">86</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="textGenParrafoTabla">Ancho de hombros</th>                        
+                                <td colspan="2" class="textGenParrafo">38</td>                 
+                                <td colspan="2" class="textGenParrafo">39</td>                 
+                                <td colspan="2" class="textGenParrafo">41</td>                 
+                                <td colspan="2" class="textGenParrafo">42</td>                 
+                                <td colspan="2" class="textGenParrafo">45</td>                 
+                                <td colspan="2" class="textGenParrafo">43</td>                 
+                                <td colspan="2" class="textGenParrafo">45</td>                 
+                                <td colspan="2" class="textGenParrafo">49</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="textGenParrafoTabla">Contorno de pecho</th>
+                                <td colspan="2" class="textGenParrafo">96</td>                 
+                                <td colspan="2" class="textGenParrafo">100</td>                 
+                                <td colspan="2" class="textGenParrafo">104</td>                 
+                                <td colspan="4" class="textGenParrafo">108</td>                                  
+                                <td colspan="2" class="textGenParrafo">112</td>                 
+                                <td colspan="2" class="textGenParrafo">120</td>                 
+                                <td colspan="2" class="textGenParrafo">132</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="textGenParrafoTabla">Cintura</th>
+                                <td colspan="2" class="textGenParrafo">88</td>                 
+                                <td colspan="2" class="textGenParrafo">92</td>                 
+                                <td colspan="2" class="textGenParrafo">96</td>                 
+                                <td colspan="4" class="textGenParrafo">100</td>                                  
+                                <td colspan="2" class="textGenParrafo">104</td>                 
+                                <td colspan="2" class="textGenParrafo">112</td>                 
+                                <td colspan="2" class="textGenParrafo">120</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="textGenParrafoTabla">Largo de manga</th>
+                                <td colspan="2" class="textGenParrafo">17</td>                 
+                                <td colspan="2" class="textGenParrafo">17</td>                 
+                                <td colspan="2" class="textGenParrafo">18</td>                 
+                                <td colspan="4" class="textGenParrafo">19</td>                                  
+                                <td colspan="2" class="textGenParrafo">20</td>                 
+                                <td colspan="2" class="textGenParrafo">20</td>                 
+                                <td colspan="2" class="textGenParrafo">24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="textGenParrafoTabla">Contorno de manga</th>
+                                <td colspan="2" class="textGenParrafo">32</td>                 
+                                <td colspan="2" class="textGenParrafo">32</td>                 
+                                <td colspan="2" class="textGenParrafo">33</td>                 
+                                <td colspan="4" class="textGenParrafo">34</td>                                  
+                                <td colspan="2" class="textGenParrafo">35</td>                 
+                                <td colspan="2" class="textGenParrafo">36</td>                 
+                                <td colspan="2" class="textGenParrafo">37</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                 
+            </div>    
+            
+            
+    
+            <!--cómo tomar las medidas-->
+            <div class="container espaciado" data-aos="zoom-in">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="textCentradoVer">
+                            <h2 class="textGenTitulo">
+                                ¿Cómo tomar esas medidas?
+                            </h2>
+                            <p class="textGenParrafo">
+                                Podés tomar tus medidas corporales siguiendo la imagen. Donde:
+                            </p>
+                            <p class="textGenParrafo">1. Largo</p>
+                            <p class="textGenParrafo">2. Ancho de hombros</p>
+                            <p class="textGenParrafo">3. Contorno de pecho</p>
+                            <p class="textGenParrafo">4. Cintura</p>
+                            <p class="textGenParrafo">5. Largo de manga</p>
+                            <p class="textGenParrafo">6. Contorno de manga</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6">
+                        <div class="textCentradoVer">
+                            <div class="centradoHoriz">
+                                <img src="..\images/tomarMedidas.jpg" class="imagenMedidas img-fluid" alt="Cómo tomar las medidas"> 
+                            </div>                            
+                        </div>                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container espaciado">
+                <p class="textGenParrafo">
+                    Si querés alguna modificación en el talle elegido (por ejemplo que
+                    sea un poco más corta o más larga, que sea más angosta de cintura o de mangas,
+                    o cualquier detalle que le quieras cambiar) podés pedirlo al hacer la compra.
+                </p>
+                <p class="textGenParrafo">                    
+                    ¡No dudes en consultarnos si tenés alguna duda!
+                </p>
+            </div>
+            
+        </main>
+    
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">                         
+                        <a href="https://g.page/SantulanC?share " class="hypFooter"><i class="bi bi-geo-alt-fill"></i> 25 de Mayo 1659, Santa Fe, Arg.</a>                      
+                    </div>
+                    <div class="col-1 iconos">
+                        <a href="https://www.instagram.com/santulan.sfe/?fbclid=IwAR3-QsEsAeuRHy8xtq_rERxxapuAA-1d2UyLWTzt5KJVtwaK2LVZcwCcfE8" class="hypFooter">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="col-1 iconos"> 
+                        <a href="https://www.facebook.com/santulan.santafe/" class="hypFooter">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                    <div class="col-1 iconos">
+                        <a href="https://wa.link/45qpfy" class="hypFooter">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>             
+            </div>        
+        </footer>
+        
+    </div>
+
+    <!-- Animaciones -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="..\js/scriptCarrito.js"></script>
+
+</body>
+</html>

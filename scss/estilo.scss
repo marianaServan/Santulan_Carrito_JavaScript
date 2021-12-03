@@ -1,0 +1,398 @@
+@import "variables";
+
+
+/* BÁSICOS */
+
+html{
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ol{
+    list-style-type: none;
+}
+ul{
+    list-style-type: none;
+}
+.pantallaCompleta{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* HEADER */
+
+.headerColor{
+    background-image: linear-gradient(to bottom, $colorNaranjaOscuro, $colorNaranjaClaro);
+}
+.anchoLogo{
+    width: 4rem;
+}
+.nav--otrasPaginas{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/*-------- Menú hamburguesa --------*/
+.nav--colapsado{
+    display: flex;
+    flex-direction: column;
+}
+.miBurger{
+    width: 3rem;
+    height: 2.2rem;
+    border-color: $colorBotonesHover;
+    background-color: transparent;
+    border-radius:$radioBordesCards ;
+}
+.miBurger .line{
+    width: 80%;
+    height: 0.13rem;
+    float: left;
+    margin-left: 0.32rem;
+    background-color: $colorBotonesHover;
+    margin-bottom: 0.32rem;    
+}
+
+/*-------- Menú desplegable --------*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $colorNaranjaClaro;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/*------- Estilo letras ------*/
+.nombre{
+    font-family: $letraTitulos;
+    text-decoration: none;
+    font-size: 1.4rem;    
+    color: $colorLetraOscuro;
+    text-align: center;
+}
+.hyp{ /*la voy a usar para el footer también*/
+    font-family: $letraTextoGen;
+    text-decoration: none;
+    color: $colorLetraOscuro;
+    font-size: 0.8rem;
+}
+.hypHeader{ 
+    @extend .hyp;
+    text-align: right;
+    padding-left: $espacio*1.1;
+    padding-right: $espacio*1.1;
+    padding-top: $espacio;
+    padding-bottom: $espacio;
+
+    &:hover{
+        color: $colorHoverLetras;
+    }
+}
+.hypHeaderActive{
+    @extend .hypHeader;
+    font-weight: bold;
+}
+.hypBreadcrumb{
+    @extend .hyp;
+    &:hover{    
+        color: $colorHoverLetras;
+    }
+}
+.hypHeaderBoton{ 
+    @extend .hyp;
+    text-align: left;
+    padding-left: $espacio*2;
+    padding-top: $espacio;
+    padding-bottom: $espacio;
+
+    &:hover{
+        color: $colorHoverLetras;
+    }
+}
+.hypHeaderBotonDesplegado{ 
+    @extend .hypHeaderBoton;
+    padding-right: $espacio*2;
+}
+
+
+/* BODY */
+
+.bodyColor{
+    background-color: $colorNaranjaClaro;
+}
+
+/*------- Estilo letras ------*/
+@mixin textGen ($fontFamily, $fontSize, $fontColor) {
+    font-style: normal;
+    font-weight: normal;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $fontColor;
+    text-align: center;    
+}
+.textGenTitulo{
+    @include textGen($letraTitulos, 1.28rem, $colorTitulos);
+    padding-bottom: $espacio;
+    margin-top: $espacio;
+    margin-bottom: $espacio;
+}
+.textGenParrafo{
+    @include textGen($letraTextoGen, $sizeTextoGen, $colorTextoGen);
+    text-decoration: none;
+    padding-left: 1.16rem;
+    padding-right: 1.16rem;
+}
+.textGenParrafoLeft{
+    @include textGen($letraTextoGen, $sizeTextoGen, $colorTextoGen);
+    text-align: left;
+}
+.textGenParrafoTabla{
+    @include textGen($letraTextoGen, $sizeTextoGen, $colorTextoGen);
+    text-decoration: solid;
+    padding-left: 1.16rem;
+    padding-right: 1.16rem;
+    font-weight: bold;
+}
+
+/*------- Botones ------*/
+.botones{
+    color: $colorTitulos;
+    border-radius: $radioBordesCards;
+    font-weight: bold;
+    background-color: $colorBotones;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover{   
+        color: $colorHoverLetras; 
+        background-color: $colorBotonesHover;
+    }
+}
+.botonesFormulario{
+    @extend .botones;    
+    border-style: none;
+    margin-left: $espacio;
+    margin-right: $espacio;
+}
+.botonesCarrito{
+    @extend .botones;
+    border-style: none;
+    background-color: transparent;
+    &:hover{
+        background-color: transparent;
+    }
+}
+
+/*------- Elementos Centrados ------*/
+.centradoHoriz{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.textCentradoVer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*------ Espacio entre párrafos -------*/
+.espaciado{
+    margin-top: $espacioTop;
+}
+
+/*------- Páginas ------*/
+
+/*------------------------ Home -----------------------*/
+.imagenCircular{
+    border-radius: 7rem;
+}
+
+/*------------------------ Productos -----------------------*/
+.tiposProductos{
+    padding-left: 0.12rem;
+    padding-right: 0.12rem;
+    
+    &:hover{
+        transform: scale(1.035,1.035);
+    }
+}
+.cardEstilo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    word-wrap: break-word;
+    background-color: $colorBotones;
+    background-clip: border-box;
+    border: 0.06rem solid $colorBotonesHover;
+    border-radius: $radioBordesCards;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: $sizeTextoGen;
+    color: $colorTextoGen;
+    text-decoration: none;
+
+    &:hover{
+        transform: scale(1.035,1.035);
+        background-color: $colorBotonesHover;
+    }
+}
+.cardBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.cardAlto{
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.bordeImagen{
+    border-top-right-radius: $radioBordesCards;
+    border-top-left-radius: $radioBordesCards;
+}
+.mensaje{
+    background-color: $colorLetraOscuro;
+    color: $colorNaranjaClaro;
+}
+
+/*------------------------ A medida -----------------------*/
+.carousel{
+    width: 50%;
+}
+
+/*------------------------ Talles -----------------------*/
+.imagenMedidas{
+    width: 60%;
+}
+.colorBordeTabla{
+    border-color: $colorBotonesHover;
+    border-style: solid;
+}
+
+/*------------------------ Contacto -----------------------*/
+.anchoYborde{
+    width: 100%;
+    border-color:  $colorBotonesHover;
+    border-width: thin;
+}
+.textGenInput{
+    padding-top: $espacio;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-image: linear-gradient(to top, $colorNaranjaOscuro, $colorNaranjaClaro);
+    height: 4rem;
+    padding-top: 1.4rem;
+}
+.hypFooter{
+    @extend .hyp; 
+    &:hover{
+        color: $colorHoverLetras;
+    }
+} 
+.iconos{
+    padding-left: 0%;
+}
+
+
+/* RESPONSIVE */
+
+@media (min-width:768px) {    
+    .nombre{
+        font-size: 2.2rem; 
+    }
+    .nav--colapsado{
+        flex-direction: row;
+    }
+    .miBurger{
+        display: none;
+    }
+    .hyp{
+        font-size: 1rem;
+    }
+    .hypBreadcrumb{
+        font-size: 0.9rem;
+    }
+    .textGenTitulo{
+        font-size: 2rem;
+    }
+    .textGenParrafo{
+        font-size: $sizeTextoGenMd;
+    }
+    .textGenParrafoLeft{
+        font-size: $sizeTextoGenMd;
+    }
+    .textGenParrafoTabla{
+        font-size: $sizeTextoGenMd;
+    }
+    .anchoLogo{
+        width: 5rem;
+    }
+    .imagenMedidas{
+        width: 80%;
+    }
+    .cardEstilo{        
+        font-size: $sizeTextoGenMd;
+    }
+}
+
+@media (min-width:1024px) {
+    .nombre{
+        font-size: 2.5rem;
+    }
+    .nav--colapsado{
+        flex-direction: row;
+    }    
+    .miBurger{
+        display: none;
+    }
+    .hyp{
+        font-size: $sizeTextoGenLg;
+    }
+    .textGenTitulo{
+        font-size: 2rem;
+    }
+    .textGenParrafo{
+        font-size: $sizeTextoGenLg;
+    }
+    .textGenParrafoLeft{
+        font-size: $sizeTextoGenLg;
+    }
+    .textGenParrafoTabla{
+        font-size: $sizeTextoGenLg;
+    }
+    .anchoLogo{
+        width: 5.1rem;
+    }
+    .imagenMedidas{
+        width: 60%;
+    }
+    .cardEstilo{        
+        font-size: $sizeTextoGenLg;
+    }
+}
+
+
+
+
+
