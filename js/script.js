@@ -1,3 +1,38 @@
+// Variables
+let carritoUsuario
+let valor
+
+// Objetos
+// Creo de esta forma los productos destacados para incorporar objetos a mi proyecto.
+class ProductoDestacado {
+    constructor(descripcion, imagen) {
+        this.descripcion = descripcion;
+        this.imagen = imagen
+    }
+
+    card() {
+        return (`
+            <div class="col-6 col-md-3">
+                <div class="centradoHoriz cardAlto">
+                    <div class="cardEstilo">
+                        <img src="${this.imagen}" class="img-fluid bordeImagen">
+                        <div class="card-body">
+                            <p class="card-text"> ${this.descripcion} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `)
+    }
+}
+
+const remeraDestacada1 = new ProductoDestacado("REMERA CON BOLSILLO Y MANGAS LEVANTADAS", "images/rem2.jpg")
+const remeraDestacada2 = new ProductoDestacado("REMERA CON COSTURAS A LA VISTA", "images/rem12.jpg")
+const remeraDestacada3 = new ProductoDestacado("REMERA CORTA CON CINTA A LOS COSTADOS", "images/rem11.jpg")
+const remeraDestacada4 = new ProductoDestacado("REMERA CON RECORTES", "images/rem7.jpg")
+
+const productosDestacados = [remeraDestacada1, remeraDestacada2, remeraDestacada3, remeraDestacada4]
+
 // Funciones
 function subtotal(productoEnCarrito) {
     let subT = productoEnCarrito[0].precio * productoEnCarrito[1]
@@ -59,13 +94,15 @@ function actualizoCostos(productoEnCarrito, carritoUsuario) {
     $('#divCarrito').append(detalleCarrito(carritoUsuario))
 }
 
-// Variables
-let carritoUsuario
-let valor
-
+// Agrego los productos destacados al index.HTML
 $(() => {
+    productosDestacados.forEach(producto => {
+        $('#productosDestacados').append(producto.card())
+    })
+})
 
-    // Carrito
+// Carrito
+$(() => {
     $('#verCarrito').click(() => {
         $('#tablaCarrito').empty()
 
@@ -140,7 +177,7 @@ $(() => {
                 if (nombreUsuario == "" || emailUsuario == "" || numeroUsuario == "") {
                     $('#datosNoCompletados').show()
                 } else {
-                    $('#formularioCompra').hide()                    
+                    $('#formularioCompra').hide()
                     $('#datosNoCompletados').hide()
                     $('#avisoCompraRealizada').show()
                     $('#avisoCompraRealizada').empty()
@@ -153,14 +190,16 @@ $(() => {
             })
         })
     })
+})
 
-    // Formulario contacto
+// Formulario contacto
+$(() => {
     $('#datosContactoNoCompletados').hide()
     $('#avisoContactoEnviado').hide()
-    $('#formularioContacto').submit(function(e) {
+    $('#formularioContacto').submit(function (e) {
         e.preventDefault()
 
-        let formDatosContacto = new FormData(e.target)        
+        let formDatosContacto = new FormData(e.target)
         let nombreContacto = formDatosContacto.get("nombreContacto")
         let emailContacto = formDatosContacto.get("emailContacto")
         let numeroContacto = formDatosContacto.get("numeroContacto")
@@ -168,7 +207,7 @@ $(() => {
 
         if (nombreContacto == "" || emailContacto == "" || numeroContacto == "" || mensajeContacto == "") {
             $('#datosContactoNoCompletados').show()
-        } else {                   
+        } else {
             $('#datosContactoNoCompletados').hide()
             $('#avisoContactoEnviado').slideDown(1000).delay(1000).fadeOut(1000)
 
@@ -180,13 +219,3 @@ $(() => {
         }
     })
 })
-
-
-
-
-
-
-
-
-
-

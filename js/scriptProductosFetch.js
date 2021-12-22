@@ -1,3 +1,6 @@
+// Con este script agrego los productos a las páginas remeras, sweaters y camperas, mediante fetch
+
+
 // Variables
 let remerasDisponibles = document.getElementById("remerasDisponibles")
 let sweatersDisponibles = document.getElementById("sweatersDisponibles")
