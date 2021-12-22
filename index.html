@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,37 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>Santulan - Inicio</title>
     <meta name="description" content="Santulan es una marca de ropa. Realizamos remeras, sweaters y camperas
-    en una gran variedad de talles. Ofrecemos el servicio de confección de prendas a medida."> 
+    en una gran variedad de talles. Ofrecemos el servicio de confección de prendas a medida.">
     <meta name="keywords" content="remera, sweater, campera, talles, variedad de talles, ropa a medida, modista">
 </head>
+
 <body class="bodyColor">
     <div class="pantallaCompleta">
-        <header class="headerColor">   
-            
+        <header class="headerColor">
+
             <nav class="navbar navbar-expand-lg navbar-expand-md">
                 <div class="container-fluid">
                     <!-- LOGO (HOME) -->
                     <a class="navbar-brand" href="index.html">
-                        <img src="images/LogoSantulan1.png" alt="Logo" class="anchoLogo d-inline-block align-text-center img-fluid">
-                        <span class="nombre"> Santulan </span> 
+                        <img src="images/LogoSantulan1.png" alt="Logo"
+                            class="anchoLogo d-inline-block align-text-center img-fluid">
+                        <span class="nombre"> Santulan </span>
                     </a>
-                    
+
                     <!-- MENÚ HAMBUERGUESA   -->
-                    <button class="miBurger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="line"></span> 
-                        <span class="line"></span> 
+                    <button class="miBurger" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="line"></span>
+                        <span class="line"></span>
                         <span class="line" style="margin-bottom: 0;"></span>
                     </button>
 
@@ -39,39 +46,116 @@
                     <div class="collapse navbar-collapse nav--otrasPaginas" id="navbarSupportedContent">
                         <div class="nav nav--colapsado">
                             <a class="hypHeaderActive" aria-current="page" href="index.html">HOME</a>
-                            
+
                             <div>
                                 <div class="dropdown">
                                     <i class="bi bi-chevron-down hypHeaderBoton"></i>
                                     <div class="dropdown-content">
-                                        <a class="hypHeaderBotonDesplegado" href="pages/subpages/remeras.html">REMERAS</a>
-                                        <a class="hypHeaderBotonDesplegado" href="pages/subpages/sweaters.html">SWEATERS</a>
-                                        <a class="hypHeaderBotonDesplegado" href="pages/subpages/camperas.html">CAMPERAS</a>
-                                    </div>                                  
-                                </div>  
+                                        <a class="hypHeaderBotonDesplegado"
+                                            href="pages/subpages/remeras.html">REMERAS</a>
+                                        <a class="hypHeaderBotonDesplegado"
+                                            href="pages/subpages/sweaters.html">SWEATERS</a>
+                                        <a class="hypHeaderBotonDesplegado"
+                                            href="pages/subpages/camperas.html">CAMPERAS</a>
+                                    </div>
+                                </div>
                                 <a class="hypHeader dropdown" href="pages/Productos.html">
-                                    PRODUCTOS 
+                                    PRODUCTOS
                                 </a>
-                            </div>    
+                            </div>
 
                             <a class="hypHeader" href="pages/Amedida.html">A MEDIDA</a>
                             <a class="hypHeader" href="pages/Talles.html">TALLES</a>
-                            <a class="hypHeader" href="pages/Contacto.html">CONTACTO</a> 
-                            <a class="botonesCarrito" href="pages/Carrito.html"><i class="bi bi-cart-fill" > </i></a> 
-                        </div>                                                
+                            <a class="hypHeader" href="pages/Contacto.html">CONTACTO</a>
+                            <button class="textGenParrafo botonesCarrito" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i
+                                    class="bi bi-cart-fill"> </i> </button>
+
+                        </div>
                     </div>
                 </div>
             </nav>
-                    
+
         </header>
-    
+
         <main>
 
+            <!--CARRITO-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="bodyColor pantallaCompleta">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="container">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="colorBordeTabla">
+                                        <tr>
+                                            <th scope="col" class="textGenParrafoTabla ">PRODUCTO</th>
+                                            <th scope="col" class="textGenParrafoTabla ">SUBTOTAL</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="colorBordeTabla" id="tablaCarrito"></tbody>
+                                </table>
+                            </div>
+                            <div id="divCarrito">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--FINALIZAR COMPRA-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-Form"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="bodyColor pantallaCompleta">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="container">
+                            <p class="textGenParrafo">
+                                Ingrese los datos solicitados, le enviaremos la confirmación de su compra al email ingresado
+                            </p>
+
+                            <div id="formularioCompra">
+                                <form action="" method="" class="textGenParrafoFormCompra textGenInput">
+
+                                    <div class="container">
+                                        <label for="nombre">Nombre:</label> 
+                                        <input type="text" placeholder="Ingrese su nombre" id="nombreCompra" class="anchoYborde">
+                                        <br>
+                                        <label for="email">Email:</label> 
+                                        <input type="text" placeholder="Ingrese su email" id="emailCompra" class="anchoYborde">
+                                        <br>
+                                        <label for="numero">Teléfono:</label> 
+                                        <input type="number" placeholder="Ingrese su número de teléfono" id="numeroCompra" class="anchoYborde">
+                                        <br>
+                                    </div>                                     
+
+                                    <div class="centradoHoriz" style="margin-top: 20px;">
+                                        <button type="reset" class="textGenParrafoCarrito botonesDelCarrito">Limpiar campos</button>
+                                        <button type="submit" class="textGenParrafoCarrito botonesDelCarrito" id="submitFormCompra">Confirmar compra</button>
+                                    </div>                                                               
+                                </form>
+                            </div>
+
+                            <p class="textGenParrafoCarrito" id="avisoCompraRealizada"> Tu compra se ha procesado con éxito, te enviaremos un email con más detalles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!--PRODUCTOS DESTACADOS-->
             <h1 class="textGenTitulo">
                 Productos destacados
-            </h1>  
+            </h1>
 
             <div class="container">
                 <div class="row">
@@ -85,7 +169,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
 
                     <div class="col-6 col-md-3">
@@ -98,7 +182,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
 
                     <div class="col-6 col-md-3">
@@ -111,7 +195,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
 
                     <div class="col-6 col-md-3">
@@ -127,29 +211,30 @@
                         </div>
                     </div>
 
-                </div>                
+                </div>
             </div>
 
             <div class="containter">
                 <div class="row" style="margin-left: 0px; margin-right: 0px">
                     <div class="col-12 col-md-6">
-                        <div class="espaciado" data-aos="zoom-in"> 
+                        <div class="espaciado" data-aos="zoom-in">
                             <div class="centradoHoriz">
-                                <img src="images/trabajosAmedida.jpg" class="imagenCircular" width="25%" alt="Máquina de coser">
+                                <img src="images/trabajosAmedida.jpg" class="imagenCircular" width="25%"
+                                    alt="Máquina de coser">
                             </div>
-                            
+
                             <h2 class="textGenTitulo">
                                 Prendas a medida
                             </h2>
-                        
+
                             <p class="textGenParrafo">
                                 Si querés otra prenda, diferente a las publicadas,
                                 por ejemplo un vestido, pollera, blusa, camisa, etc.,
-                                podes contactarnos y la confeccionamos a tu medida. Conocé más: 
+                                podes contactarnos y la confeccionamos a tu medida. Conocé más:
                             </p>
                             <div class="centradoHoriz">
-                                <a href="pages/Amedida.html"  class="textGenParrafo botones">A MEDIDA</a>
-                            </div>                            
+                                <a href="pages/Amedida.html" class="textGenParrafo botones">A MEDIDA</a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
@@ -161,34 +246,36 @@
                             <h2 class="textGenTitulo">
                                 Sobre nosotros
                             </h2>
-                    
+
                             <p class="textGenParrafo">
                                 Santulan nace al notar la dificultad que existe al buscar
                                 un talle que se adapte bien a cualquier cuerpo. Es por eso
                                 que realizamos una ampliación de los talles convencionales,
                                 obteniendo así talles intermedios, que te permitiran encontrar
                                 el calce perfecto.
-                            </p> 
+                            </p>
                         </div>
                     </div>
                 </div>
 
-            </div>               
-                
+            </div>
+
         </main>
 
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-9">                         
-                        <a href="https://g.page/SantulanC?share " class="hypFooter"><i class="bi bi-geo-alt-fill"></i> 25 de Mayo 1659, Santa Fe, Arg.</a>                      
+                    <div class="col-9">
+                        <a href="https://g.page/SantulanC?share " class="hypFooter"><i class="bi bi-geo-alt-fill"></i>
+                            25 de Mayo 1659, Santa Fe, Arg.</a>
                     </div>
                     <div class="col-1 iconos">
-                        <a href="https://www.instagram.com/santulan.sfe/?fbclid=IwAR3-QsEsAeuRHy8xtq_rERxxapuAA-1d2UyLWTzt5KJVtwaK2LVZcwCcfE8" class="hypFooter">
+                        <a href="https://www.instagram.com/santulan.sfe/?fbclid=IwAR3-QsEsAeuRHy8xtq_rERxxapuAA-1d2UyLWTzt5KJVtwaK2LVZcwCcfE8"
+                            class="hypFooter">
                             <i class="bi bi-instagram"></i>
                         </a>
                     </div>
-                    <div class="col-1 iconos"> 
+                    <div class="col-1 iconos">
                         <a href="https://www.facebook.com/santulan.santafe/" class="hypFooter">
                             <i class="bi bi-facebook"></i>
                         </a>
@@ -198,12 +285,12 @@
                             <i class="bi bi-whatsapp"></i>
                         </a>
                     </div>
-                </div>             
-            </div>        
+                </div>
+            </div>
         </footer>
 
     </div>
-    
+
     <!-- Animaciones -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -211,10 +298,14 @@
     </script>
 
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/scriptCarrito.js"></script>
 
 </body>
+
 </html>

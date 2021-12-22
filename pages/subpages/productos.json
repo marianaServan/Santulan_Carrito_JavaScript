@@ -5,7 +5,7 @@
         "color": "blanca",
         "detalle": "con mangas levantadas", 
         "precio": 1900,
-        "imagen": "./images/rem1.jpg" 
+        "imagen": "./images/rem1.jpg"
     },
     {
         "id": 2,

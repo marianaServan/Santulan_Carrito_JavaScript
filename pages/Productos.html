@@ -57,15 +57,45 @@
                             <a class="hypHeader" href="Amedida.html">A MEDIDA</a>
                             <a class="hypHeader" href="Talles.html">TALLES</a>
                             <a class="hypHeader" href="Contacto.html">CONTACTO</a>                              
-                            <a class="botonesCarrito" href="Carrito.html"><i class="bi bi-cart-fill" > </i></a> 
+                            <button class="textGenParrafo botonesCarrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart-fill"> </i> </button>
+                            
                         </div>                                                
                     </div>
                 </div>
             </nav>      
         </header>
     
-        <main>
+        <main>            
             
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="bodyColor pantallaCompleta">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="container">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="colorBordeTabla">
+                                        <tr>
+                                            <th scope="col" class="textGenParrafoTabla ">PRODUCTO</th>
+                                            <th scope="col" class="textGenParrafoTabla ">SUBTOTAL</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="colorBordeTabla" id="tablaCarrito"></tbody>
+                                </table>
+                            </div>
+                            <div id="divCarrito">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <h1 class="textGenTitulo">
                 Nuestros productos
             </h1>

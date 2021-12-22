@@ -167,7 +167,16 @@ ul{
     padding-right: 1.16rem;
     font-weight: bold;
 }
-
+.textGenParrafoCarrito{
+    @include textGen($letraTextoGen, $sizeTextoGen, $colorTextoGen);
+    text-decoration: none;
+    padding-left: 1.16rem;
+    padding-right: 1.16rem;
+}
+.textGenParrafoFormCompra{
+    @include textGen($letraTextoGen, $sizeTextoGen, $colorTextoGen);
+    text-align: left;
+}
 /*------- Botones ------*/
 .botones{
     color: $colorTitulos;
@@ -191,6 +200,19 @@ ul{
 .botonesCarrito{
     @extend .botones;
     border-style: none;
+    background-color: transparent;
+    &:hover{
+        background-color: transparent;
+    }
+}
+.botonesDelCarrito{
+    @extend .botones;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-width: 1px;
+    border-color: $colorTitulos;
     background-color: transparent;
     &:hover{
         background-color: transparent;
@@ -345,6 +367,12 @@ footer{
     .textGenParrafoTabla{
         font-size: $sizeTextoGenMd;
     }
+    .textGenParrafoCarrito{
+        font-size: $sizeTextoGenMd;
+    }
+    .textGenParrafoFormCompra{
+        font-size: $sizeTextoGenCarrito;
+    }
     .anchoLogo{
         width: 5rem;
     }
@@ -380,6 +408,12 @@ footer{
     }
     .textGenParrafoTabla{
         font-size: $sizeTextoGenLg;
+    }
+    .textGenParrafoCarrito{
+        font-size: $sizeTextoGenCarrito;
+    }
+    .textGenParrafoFormCompra{
+        font-size: $sizeTextoGenCarrito;
     }
     .anchoLogo{
         width: 5.1rem;

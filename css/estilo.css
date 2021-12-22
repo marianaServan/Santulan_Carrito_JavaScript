@@ -159,15 +159,35 @@ ul {
   padding-right: 1.16rem;
   font-weight: bold; }
 
+.textGenParrafoCarrito {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.81rem;
+  color: #492152;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 1.16rem;
+  padding-right: 1.16rem; }
+
+.textGenParrafoFormCompra {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.81rem;
+  color: #492152;
+  text-align: center;
+  text-align: left; }
+
 /*------- Botones ------*/
-.botones, .botonesFormulario, .botonesCarrito {
+.botones, .botonesFormulario, .botonesCarrito, .botonesDelCarrito {
   color: #5e2a69;
   border-radius: 0.3rem;
   font-weight: bold;
   background-color: rgba(95, 42, 105, 0.144);
   text-decoration: none;
   text-transform: uppercase; }
-  .botones:hover, .botonesFormulario:hover, .botonesCarrito:hover {
+  .botones:hover, .botonesFormulario:hover, .botonesCarrito:hover, .botonesDelCarrito:hover {
     color: #f1a643;
     background-color: rgba(95, 42, 105, 0.479); }
 
@@ -180,6 +200,17 @@ ul {
   border-style: none;
   background-color: transparent; }
   .botonesCarrito:hover {
+    background-color: transparent; }
+
+.botonesDelCarrito {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-width: 1px;
+  border-color: #5e2a69;
+  background-color: transparent; }
+  .botonesDelCarrito:hover {
     background-color: transparent; }
 
 /*------- Elementos Centrados ------*/
@@ -301,6 +332,10 @@ footer {
     font-size: 1.1rem; }
   .textGenParrafoTabla {
     font-size: 1.1rem; }
+  .textGenParrafoCarrito {
+    font-size: 1.1rem; }
+  .textGenParrafoFormCompra {
+    font-size: 0.9rem; }
   .anchoLogo {
     width: 5rem; }
   .imagenMedidas {
@@ -325,6 +360,10 @@ footer {
     font-size: 1.2rem; }
   .textGenParrafoTabla {
     font-size: 1.2rem; }
+  .textGenParrafoCarrito {
+    font-size: 0.9rem; }
+  .textGenParrafoFormCompra {
+    font-size: 0.9rem; }
   .anchoLogo {
     width: 5.1rem; }
   .imagenMedidas {
