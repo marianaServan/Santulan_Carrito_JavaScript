@@ -161,17 +161,17 @@
 
                     <!--FORMULARIO-->
                     <div class="col-12 col-md-6">
-                        <form action="" method="" class="textGenParrafoLeft textGenInput">
+                        <form class="textGenParrafoLeft textGenInput" id="formularioContacto">
                 
                             <!-- Input -->
                             <label for="nombre">Nombre:</label> 
-                            <input type="text" placeholder="Ingrese su nombre" id="nombre" class="anchoYborde">
+                            <input type="text" placeholder="Ingrese su nombre" id="nombreContacto" name="nombreContacto" class="anchoYborde">
                             <br>
                             <label for="email">Email:</label> 
-                            <input type="text" placeholder="Ingrese su email" id="email" class="anchoYborde">
+                            <input type="text" placeholder="Ingrese su email" id="emailContacto" name="emailContacto" class="anchoYborde">
                             <br>
                             <label for="numero">Teléfono:</label> 
-                            <input type="number" placeholder="Ingrese su número de teléfono" id="numero" class="anchoYborde">
+                            <input type="number" placeholder="Ingrese su número de teléfono" id="numeroContacto" name="numeroContacto" class="anchoYborde">
                             <br>
                             
                             <!-- Menú desplegable -->
@@ -186,7 +186,7 @@
                             <!-- Texto multilinea -->
                             <label for="mensaje">Mensaje:</label>
                             <br>
-                            <textarea name="" id="mensaje" rows="4" class="anchoYborde"></textarea>
+                            <textarea name="mensajeContacto" id="mensajeContacto" rows="4" class="anchoYborde"></textarea>
                             
                 
                             <!-- Checkbox -->
@@ -201,6 +201,8 @@
                                     
                       
                         </form>
+                        <p class="textGenParrafoCarrito" id="datosContactoNoCompletados"> Debe completar todos los campos. </p>
+                        <p class="textGenParrafoCarrito" id="avisoContactoEnviado"> ¡Gracias! Nos comunicaremos a la brevedad. </p>
                     </div>
                 </div>                
             </div>               
@@ -237,7 +239,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="..\js/scriptCarrito.js"></script>
+    <script src="..\js/scriptCarrito-Formulario.js"></script>
 
 </body>
 </html>

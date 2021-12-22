@@ -153,6 +153,32 @@ $(() => {
             })
         })
     })
+
+    // Formulario contacto
+    $('#datosContactoNoCompletados').hide()
+    $('#avisoContactoEnviado').hide()
+    $('#formularioContacto').submit(function(e) {
+        e.preventDefault()
+
+        let formDatosContacto = new FormData(e.target)        
+        let nombreContacto = formDatosContacto.get("nombreContacto")
+        let emailContacto = formDatosContacto.get("emailContacto")
+        let numeroContacto = formDatosContacto.get("numeroContacto")
+        let mensajeContacto = formDatosContacto.get("mensajeContacto")
+
+        if (nombreContacto == "" || emailContacto == "" || numeroContacto == "" || mensajeContacto == "") {
+            $('#datosContactoNoCompletados').show()
+        } else {                   
+            $('#datosContactoNoCompletados').hide()
+            $('#avisoContactoEnviado').slideDown(1000).delay(1000).fadeOut(1000)
+
+            //Limpio todos los campos
+            $('#nombreContacto').val("")
+            $('#emailContacto').val("")
+            $('#numeroContacto').val("")
+            $('#mensajeContacto').val("")
+        }
+    })
 })
 
 
