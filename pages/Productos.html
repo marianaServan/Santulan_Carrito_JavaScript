@@ -57,8 +57,9 @@
                             <a class="hypHeader" href="Amedida.html">A MEDIDA</a>
                             <a class="hypHeader" href="Talles.html">TALLES</a>
                             <a class="hypHeader" href="Contacto.html">CONTACTO</a>                              
-                            <button class="textGenParrafo botonesCarrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-cart-fill"> </i> </button>
-                            
+                            <button class="textGenParrafo botonesCarrito" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight-Carrito" aria-controls="offcanvasRight-Carrito" id="verCarrito"> <i
+                                    class="bi bi-cart-fill"> </i> </button>
                         </div>                                                
                     </div>
                 </div>
@@ -67,7 +68,8 @@
     
         <main>            
             
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+            <!--CARRITO-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-Carrito"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="bodyColor pantallaCompleta">
                     <div class="offcanvas-header">
@@ -91,6 +93,48 @@
                             <div id="divCarrito">
 
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--FINALIZAR COMPRA-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-FormCompra"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="bodyColor pantallaCompleta">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="container">
+                            <div id="formularioCompra">
+                                <p class="textGenParrafo">
+                                    Ingrese los datos solicitados, le enviaremos la confirmación de su compra al email ingresado
+                                </p>
+                                
+                                <form class="textGenParrafoFormCompra textGenInput" id="infoComprador">
+
+                                    <div class="container">
+                                        <label for="nombre">Nombre:</label> 
+                                        <input type="text" placeholder="Ingrese su nombre" id="nombreCompra" name="nombreCompra" class="anchoYborde">
+                                        <br>
+                                        <label for="email">Email:</label> 
+                                        <input type="text" placeholder="Ingrese su email" id="emailCompra" name="emailCompra" class="anchoYborde">
+                                        <br>
+                                        <label for="numero">Teléfono:</label> 
+                                        <input type="number" placeholder="Ingrese su número de teléfono" id="numeroCompra" name="numeroCompra" class="anchoYborde">
+                                        <br>
+                                    </div>                                     
+
+                                    <div class="centradoHoriz" style="margin-top: 20px;">
+                                        <button type="reset" class="textGenParrafoCarrito botonesDelCarrito">Limpiar campos</button>
+                                        <button type="submit" class="textGenParrafoCarrito botonesDelCarrito" id="submitFormCompra">Confirmar compra</button>
+                                    </div>                                                               
+                                </form>
+                            </div>
+                            <p class="textGenParrafoCarrito" id="datosNoCompletados"> Debe completar todos los campos. </p>
+                            <p class="textGenParrafoCarrito" id="avisoCompraRealizada"> </p>
                         </div>
                     </div>
                 </div>

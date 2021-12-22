@@ -27,7 +27,7 @@ function detalleCarrito(carrito) {
         return (`
             <div class="centradoHoriz"> 
                 <p class="textGenParrafoCarrito"> No hay productos en el carrito.</p>
-                <button class="botonesCarrito textGenParrafoCarrito" type="button" id="botonFinalizarCompra" name="botonFinalizarCompra"> Finalizar compra</button>
+                <button class="botonesCarrito textGenParrafoCarrito" type="button"> Finalizar compra</button>
             </div>
         `
         )
@@ -35,8 +35,8 @@ function detalleCarrito(carrito) {
         return (`
             <div class="centradoHoriz"> 
                 <p class="textGenParrafoCarrito"> ${detalleCostoFinal(costoFinal(carrito))} </p>
-                <button class="textGenParrafo botonesCarrito" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasRight-Form" aria-controls="offcanvasRight-Form"> 
+                <button class="textGenParrafoCarrito botonesCarrito" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight-FormCompra" aria-controls="offcanvasRight-FormCompra" id="botonFinalizarCompra"> 
                                 finalizar compra </button>
             </div>
         `
@@ -64,15 +64,20 @@ let carritoUsuario
 let valor
 
 $(() => {
-    // Consulto si tengo algo guardado en el localStorage
-    carritoUsuario = JSON.parse(localStorage.getItem('carrito'))
-    if (carritoUsuario == null) {
-        carritoUsuario = []
-    }
 
-    // armo el carrito
-    carritoUsuario.forEach((productoEnCarrito, indice) => {
-        $('#tablaCarrito').append(`
+    // Carrito
+    $('#verCarrito').click(() => {
+        $('#tablaCarrito').empty()
+
+        // Consulto si tengo algo guardado en el localStorage
+        carritoUsuario = JSON.parse(localStorage.getItem('carrito'))
+        if (carritoUsuario == null) {
+            carritoUsuario = []
+        }
+
+        // Armo el carrito
+        carritoUsuario.forEach((productoEnCarrito, indice) => {
+            $('#tablaCarrito').append(`
             <tr id="productoCarrito${indice}">
                 <th scope="row" class="textGenParrafoCarrito">
                     ${productoEnCarrito[0].nombre} ${productoEnCarrito[0].color}, ${productoEnCarrito[0].detalle}
@@ -84,43 +89,73 @@ $(() => {
                 </th>
                 <th scope="row" class="textGenParrafoCarrito" id="subtotal${productoEnCarrito[0].id}"> ${subtotal(productoEnCarrito)} </th>                    
             </tr>
-        `
-        )
+            `
+            )
 
-        // Click en el boton ELIMINAR - saco el producto del carrito
-        $(`#botonEliminar${productoEnCarrito[0].id}`).click(() => {
-            eliminarProducto(indice, carritoUsuario)
-        })
-
-        // Click en el boton MAS - modifico la cantidad sumando
-        $(`#botonMas${productoEnCarrito[0].id}`).click(() => {
-            productoEnCarrito[1] += 1
-            localStorage.setItem('carrito', JSON.stringify(carritoUsuario))
-            valor = document.getElementById(`cantidad${productoEnCarrito[0].id}`)
-            valor.value = `${productoEnCarrito[1]}`
-            actualizoCostos(productoEnCarrito, carritoUsuario)
-        })
-
-        // Click en el boton MENOS - modifico la cantidad restando
-        $(`#botonMenos${productoEnCarrito[0].id}`).click(() => {
-            valor = document.getElementById(`cantidad${productoEnCarrito[0].id}`)
-            if (parseInt(valor.value) == 1) {
+            // Click en el boton ELIMINAR - saco el producto del carrito
+            $(`#botonEliminar${productoEnCarrito[0].id}`).click(() => {
                 eliminarProducto(indice, carritoUsuario)
-            } else {
-                productoEnCarrito[1] -= 1
+            })
+
+            // Click en el boton MAS - modifico la cantidad sumando
+            $(`#botonMas${productoEnCarrito[0].id}`).click(() => {
+                productoEnCarrito[1] += 1
                 localStorage.setItem('carrito', JSON.stringify(carritoUsuario))
+                valor = document.getElementById(`cantidad${productoEnCarrito[0].id}`)
                 valor.value = `${productoEnCarrito[1]}`
                 actualizoCostos(productoEnCarrito, carritoUsuario)
-            }
+            })
+
+            // Click en el boton MENOS - modifico la cantidad restando
+            $(`#botonMenos${productoEnCarrito[0].id}`).click(() => {
+                valor = document.getElementById(`cantidad${productoEnCarrito[0].id}`)
+                if (parseInt(valor.value) == 1) {
+                    eliminarProducto(indice, carritoUsuario)
+                } else {
+                    productoEnCarrito[1] -= 1
+                    localStorage.setItem('carrito', JSON.stringify(carritoUsuario))
+                    valor.value = `${productoEnCarrito[1]}`
+                    actualizoCostos(productoEnCarrito, carritoUsuario)
+                }
+            })
+        })
+
+        $('#divCarrito').empty()
+        $('#divCarrito').append(detalleCarrito(carritoUsuario))
+
+        // Finalizo la compra
+        $('#botonFinalizarCompra').click(() => {
+            $('#formularioCompra').show()
+            $('#datosNoCompletados').hide()
+            $('#avisoCompraRealizada').hide()
+
+            $('#infoComprador').submit(function (e) {
+                e.preventDefault()
+
+                let formDatos = new FormData(e.target)
+                let nombreUsuario = formDatos.get("nombreCompra")
+                let emailUsuario = formDatos.get("emailCompra")
+                let numeroUsuario = formDatos.get("numeroCompra")
+
+                if (nombreUsuario == "" || emailUsuario == "" || numeroUsuario == "") {
+                    $('#datosNoCompletados').show()
+                } else {
+                    $('#formularioCompra').hide()                    
+                    $('#datosNoCompletados').hide()
+                    $('#avisoCompraRealizada').show()
+                    $('#avisoCompraRealizada').empty()
+                    $('#avisoCompraRealizada').append(
+                        `¡${nombreUsuario}, tu compra se ha procesado con éxito! Enviaremos un email a ${emailUsuario} con más detalles.`
+                    )
+                    carritoUsuario = []
+                    localStorage.setItem('carrito', JSON.stringify(carritoUsuario))
+                }
+            })
         })
     })
-
-    $('#divCarrito').empty()
-    $('#divCarrito').append(detalleCarrito(carritoUsuario))
-
-    // Finalizo la compra
-
 })
+
+
 
 
 

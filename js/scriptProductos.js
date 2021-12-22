@@ -41,6 +41,11 @@ function agregarEventListener(producto) {
     document.getElementById(`botonCarrito${producto.id}`).addEventListener("click", () => {
         $(`#divAgregadoCorrecto${producto.id}`).hide()
 
+        carritoUsuario = JSON.parse(localStorage.getItem('carrito'))
+        if (carritoUsuario == null) {
+            carritoUsuario = []
+        }
+        
         // miro si ya está en el carrito
         carritoUsuario.forEach(productoEnCarrito => {
             if (producto.id == productoEnCarrito[0].id) {

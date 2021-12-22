@@ -114,7 +114,7 @@
     {
         "id": 15,
          "nombre": "Campera",
-         "color": "negro",
+         "color": "negra",
          "detalle": "con detalles en gris", 
          "precio": 3500,
          "imagen": "./images/camp3.jpg" 

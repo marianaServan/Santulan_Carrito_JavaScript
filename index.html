@@ -68,7 +68,7 @@
                             <a class="hypHeader" href="pages/Talles.html">TALLES</a>
                             <a class="hypHeader" href="pages/Contacto.html">CONTACTO</a>
                             <button class="textGenParrafo botonesCarrito" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i
+                                data-bs-target="#offcanvasRight-Carrito" aria-controls="offcanvasRight-Carrito" id="verCarrito"> <i
                                     class="bi bi-cart-fill"> </i> </button>
 
                         </div>
@@ -81,7 +81,7 @@
         <main>
 
             <!--CARRITO-->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-Carrito"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="bodyColor pantallaCompleta">
                     <div class="offcanvas-header">
@@ -111,7 +111,7 @@
             </div>
 
             <!--FINALIZAR COMPRA-->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-Form"
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-FormCompra"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="bodyColor pantallaCompleta">
                     <div class="offcanvas-header">
@@ -120,22 +120,22 @@
                     </div>
                     <div class="offcanvas-body">
                         <div class="container">
-                            <p class="textGenParrafo">
-                                Ingrese los datos solicitados, le enviaremos la confirmación de su compra al email ingresado
-                            </p>
-
                             <div id="formularioCompra">
-                                <form action="" method="" class="textGenParrafoFormCompra textGenInput">
+                                <p class="textGenParrafo">
+                                    Ingrese los datos solicitados, le enviaremos la confirmación de su compra al email ingresado
+                                </p>
+                                
+                                <form class="textGenParrafoFormCompra textGenInput" id="infoComprador">
 
                                     <div class="container">
                                         <label for="nombre">Nombre:</label> 
-                                        <input type="text" placeholder="Ingrese su nombre" id="nombreCompra" class="anchoYborde">
+                                        <input type="text" placeholder="Ingrese su nombre" id="nombreCompra" name="nombreCompra" class="anchoYborde">
                                         <br>
                                         <label for="email">Email:</label> 
-                                        <input type="text" placeholder="Ingrese su email" id="emailCompra" class="anchoYborde">
+                                        <input type="text" placeholder="Ingrese su email" id="emailCompra" name="emailCompra" class="anchoYborde">
                                         <br>
                                         <label for="numero">Teléfono:</label> 
-                                        <input type="number" placeholder="Ingrese su número de teléfono" id="numeroCompra" class="anchoYborde">
+                                        <input type="number" placeholder="Ingrese su número de teléfono" id="numeroCompra" name="numeroCompra" class="anchoYborde">
                                         <br>
                                     </div>                                     
 
@@ -145,8 +145,8 @@
                                     </div>                                                               
                                 </form>
                             </div>
-
-                            <p class="textGenParrafoCarrito" id="avisoCompraRealizada"> Tu compra se ha procesado con éxito, te enviaremos un email con más detalles.</p>
+                            <p class="textGenParrafoCarrito" id="datosNoCompletados"> Debe completar todos los campos. </p>
+                            <p class="textGenParrafoCarrito" id="avisoCompraRealizada"> </p>
                         </div>
                     </div>
                 </div>
