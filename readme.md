@@ -14,7 +14,7 @@ A continuación se detallan los pasos a seguir para instalar el proyecto:
 
 ## Demo
 
-No es necesario realizar los pasos de instalación para ver la web, puede visitar: [TueveApp](https://marianaservan.github.io/Santulan_Carrito_JavaScript/)
+No es necesario realizar los pasos de instalación para ver la web, puede visitar: [Santulan con carrito](https://marianaservan.github.io/Santulan_Carrito_JavaScript/)
 
 ## Tecnología usada:
 
