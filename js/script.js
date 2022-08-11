@@ -27,9 +27,9 @@ class ProductoDestacado {
 }
 
 const remeraDestacada1 = new ProductoDestacado("REMERA CON BOLSILLO Y MANGAS LEVANTADAS", "images/rem2.jpg")
-const remeraDestacada2 = new ProductoDestacado("REMERA CON COSTURAS A LA VISTA", "images/rem12.jpg")
-const remeraDestacada3 = new ProductoDestacado("REMERA CORTA CON CINTA A LOS COSTADOS", "images/rem11.jpg")
-const remeraDestacada4 = new ProductoDestacado("REMERA CON RECORTES", "images/rem7.jpg")
+const remeraDestacada2 = new ProductoDestacado("SWEATER NEGRO JASPEADO", "images/swe1.jpg")
+const remeraDestacada3 = new ProductoDestacado("REMERA CON COSTURAS A LA VISTA", "images/rem12.jpg")
+const remeraDestacada4 = new ProductoDestacado("SWEATER ROSA JASPEADO", "images/swe2.jpg")
 
 const productosDestacados = [remeraDestacada1, remeraDestacada2, remeraDestacada3, remeraDestacada4]
 

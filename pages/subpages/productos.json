@@ -16,14 +16,6 @@
         "imagen": "./images/rem2.jpg" 
     },
     {
-        "id": 3,
-        "nombre": "Remera",
-        "color": "azul marino",
-        "detalle": "con mangas levantadas y cinta en espalda", 
-        "precio": 1800,
-        "imagen": "./images/rem3.jpg" 
-    },
-    {
         "id": 4,
         "nombre": "Remera",
         "color": "marrón",
@@ -38,22 +30,6 @@
         "detalle": "con mangas levantadas", 
         "precio": 1900,
         "imagen": "./images/rem5.jpg" 
-    },
-    {
-       "id": 6,
-        "nombre": "Remera",
-        "color": "blanca",
-        "detalle": "con mangas levantadas", 
-        "precio": 1900,
-        "imagen": "./images/rem6.jpg" 
-    }, 
-    {
-        "id": 7,
-         "nombre": "Remera",
-         "color": "violeta",
-         "detalle": "con recortes", 
-         "precio": 2300,
-         "imagen": "./images/rem7.jpg" 
     }, 
     {
         "id": 8,
@@ -78,14 +54,6 @@
          "detalle": "con cinta en hombros", 
          "precio": 1900,
          "imagen": "./images/rem10.jpg" 
-    },
-    {
-        "id": 11,
-         "nombre": "Remera",
-         "color": "mostaza",
-         "detalle": "con cinta a los costdos y en hombros", 
-         "precio": 1800,
-         "imagen": "./images/rem11.jpg" 
     },
     {
         "id": 12,
